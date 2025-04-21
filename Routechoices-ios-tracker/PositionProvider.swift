@@ -12,6 +12,7 @@ class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var started: Bool
     var pendingStart = false
     var flushInterval = 5.0
+    var currentTask: URLSessionDataTask?
     
     override init() {
         let userDefaults = UserDefaults.standard
@@ -31,22 +32,32 @@ class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     @objc func flushBuffer() {
+        let nPos = self.locBuffer.count
+        print("Flushing ", nPos)
+        if (nPos == 0) {
+            return
+        }
+        if (self.currentTask != nil) {
+            self.currentTask!.cancel()
+            self.currentTask = nil
+        }
+        
+        let maxPos = min(nPos, 300)
+        let bufferChunk = self.locBuffer[..<maxPos]
+        
         let session = URLSession.shared
-
         var request = URLRequest(url: URL(string: "https://api.routechoices.com/locations")!)
         request.httpMethod = "POST"
+        
         var lats = ""
         var lons = ""
         var times = ""
         let batt = Int(round(UIDevice.current.batteryLevel * 100))
-
-        for loc in self.locBuffer {
+        
+        for loc in bufferChunk {
             lats += String(describing: loc.latitude) + ","
             lons += String(describing: loc.longitude) + ","
             times += String(describing: loc.time.timeIntervalSince1970) + ","
-        }
-        if (times.count == 0) {
-            return
         }
         
         let userDefaults = UserDefaults.standard
@@ -69,13 +80,20 @@ class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
         request.addValue("Bearer " + secret, forHTTPHeaderField: "Authorization")
 
         let task = session.dataTask(with: request, completionHandler: {(data, response, error) -> Void in
-            if  let httpResponse = response as? HTTPURLResponse {
+            self.currentTask = nil
+            if let httpResponse = response as? HTTPURLResponse {
                 if (httpResponse.statusCode == 201) {
-                    self.locBuffer.removeAll()
+                    let nPos = self.locBuffer.count
+                    let maxPos = min(nPos, 300)
+                    self.locBuffer = Array(self.locBuffer[maxPos...])
                     print("Positions sent ", Date())
+                    if (maxPos < nPos) {
+                        self.flushBuffer()
+                    }
                 }
             }
         })
+        self.currentTask = task
         task.resume()
     }
 
