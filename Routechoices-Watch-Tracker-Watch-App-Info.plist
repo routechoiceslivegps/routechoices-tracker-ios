@@ -6,19 +6,11 @@
 	<string>We need your location in background to share it with the event organizers and display it on the event map</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location when in use to share it with the event organizers and display it on the event map</string>
-	<key></key>
-	<string></string>
 	<key>POST_LOCATION_SECRET</key>
 	<string>$(POST_LOCATION_SECRET)</string>
-	<key>INIntentsSupported</key>
-	<array>
-		<string>Intent</string>
-	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
 	</array>
-	<key>WKBackgroundModes</key>
-	<array/>
 </dict>
 </plist>
