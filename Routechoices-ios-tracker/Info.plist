@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>POST_LOCATION_SECRET</key>
-	<string>$(POST_LOCATION_SECRET)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -19,11 +17,19 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8.1</string>
+	<string>1.8.6</string>
 	<key>CFBundleVersion</key>
-	<string>1.8.1</string>
+	<string>1.8.6</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location in background to share it with the event organizers and display it on the event map</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location when in use to share it with the event organizers and display it on the event map</string>
+	<key>POST_LOCATION_SECRET</key>
+	<string>$(POST_LOCATION_SECRET)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -31,6 +37,19 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>launchScreenBackground</string>
+		<key>UIImageName</key>
+		<string>ic_launcher</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<true/>
+	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -47,24 +66,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need your location in background to share it with the event organizers and display it on the event map</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location when in use to share it with the event organizers and display it on the event map</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIImageRespectsSafeAreaInsets</key>
-		<true/>
-		<key>UIImageName</key>
-		<string>ic_launcher</string>
-		<key>UIColorName</key>
-		<string>launchScreenBackground</string>
-	</dict>
 </dict>
 </plist>

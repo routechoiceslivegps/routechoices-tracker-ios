@@ -1,8 +1,8 @@
 import UIKit
 import CoreLocation
+import Combine
 
 class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
- 
     var locationManager: CLLocationManager
     var lastLocation: CLLocation?
     @Published var lastTimeSinceFix: Double
@@ -13,17 +13,19 @@ class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
     var pendingStart = false
     var flushInterval = 5.0
     var currentTask: URLSessionDataTask?
-    
+
     override init() {
         let userDefaults = UserDefaults.standard
         deviceId = userDefaults.string(forKey: "device_id_preference") ?? ""
         locBuffer = []
         locationManager = CLLocationManager()
         timer = Timer()
-        locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.allowsBackgroundLocationUpdates = true
+        #if os(iOS)
         UIDevice.current.isBatteryMonitoringEnabled = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+        #endif
         started = false
         lastTimeSinceFix = 60
         super.init()
@@ -52,8 +54,9 @@ class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
         var lats = ""
         var lons = ""
         var times = ""
+        #if os(iOS)
         let batt = Int(round(UIDevice.current.batteryLevel * 100))
-        
+        #endif
         for loc in bufferChunk {
             lats += String(describing: loc.latitude) + ","
             lons += String(describing: loc.longitude) + ","
@@ -64,9 +67,11 @@ class PositionProvider: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.deviceId = userDefaults.string(forKey: "device_id_preference") ?? ""
         
         var params: [String:Any] = ["latitudes": lats, "longitudes": lons, "timestamps": times, "device_id": self.deviceId]
+        #if os(iOS)
         if (batt >= 0 && batt <= 100) {
             params["battery"] = batt
         }
+        #endif
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params)
         } catch _ {
