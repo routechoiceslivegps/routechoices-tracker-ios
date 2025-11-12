@@ -6,13 +6,28 @@
 	<dict>
 		<key>Routechoices Watch Tracker Watch App.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Routechoices-ios-tracker.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>692B0F4626665BE20088EC92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>89D838252EC1FB8E00928151</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

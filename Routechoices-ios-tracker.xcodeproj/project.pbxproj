@@ -13,13 +13,23 @@
 		692B0F5226665BE30088EC92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692B0F5126665BE30088EC92 /* Preview Assets.xcassets */; };
 		692B0F5A26665C700088EC92 /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B0F5926665C700088EC92 /* PositionProvider.swift */; };
 		692B0F5C26665E4F0088EC92 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B0F5B26665E4F0088EC92 /* Position.swift */; };
+		899B2A132EC4E734007EB5A4 /* Routechoices-watch-tracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 89D838262EC1FB8E00928151 /* Routechoices-watch-tracker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		89D838392EC1FE4800928151 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D838352EC1FE4800928151 /* ContentView.swift */; };
-		89D8383A2EC1FEF500928151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692B0F4E26665BE30088EC92 /* Assets.xcassets */; };
 		89D8383B2EC1FEF500928151 /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B0F5926665C700088EC92 /* PositionProvider.swift */; };
 		89D8383C2EC1FEF500928151 /* Routechoices_ios_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B0F4A26665BE20088EC92 /* Routechoices_ios_trackerApp.swift */; };
 		89D8383E2EC1FEF500928151 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B0F5B26665E4F0088EC92 /* Position.swift */; };
 		89D838402EC1FF3800928151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D8383F2EC1FF3800928151 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		899B2A142EC4E735007EB5A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 692B0F3F26665BE20088EC92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89D838252EC1FB8E00928151;
+			remoteInfo = "Routechoices-watch-tracker";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		89D838312EC1FB9300928151 /* Embed Watch Content */ = {
@@ -28,6 +38,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				899B2A132EC4E734007EB5A4 /* Routechoices-watch-tracker.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,10 +55,10 @@
 		692B0F5926665C700088EC92 /* PositionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
 		692B0F5B26665E4F0088EC92 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		69E171FD26FA407100BD6CA3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		89D838262EC1FB8E00928151 /* Routechoices Watch Tracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Routechoices Watch Tracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89D838262EC1FB8E00928151 /* Routechoices-watch-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Routechoices-watch-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D838352EC1FE4800928151 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89D8383F2EC1FF3800928151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		89D838472EC205D600928151 /* Routechoices-Watch-Tracker-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Routechoices-Watch-Tracker-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		89D838472EC205D600928151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Routechoices-watch-tracker/Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +82,11 @@
 		692B0F3E26665BE20088EC92 = {
 			isa = PBXGroup;
 			children = (
-				89D838372EC1FE4800928151 /* Routechoices Watch Tracker Watch App */,
+				89D838372EC1FE4800928151 /* Routechoices-watch-tracker */,
 				692B0F4926665BE20088EC92 /* Routechoices-ios-tracker */,
+				8971CABC2EC4DA6400053172 /* Frameworks */,
 				692B0F4826665BE20088EC92 /* Products */,
+				899B2A122EC4E283007EB5A4 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				692B0F4726665BE20088EC92 /* Routechoices-ios-tracker.app */,
-				89D838262EC1FB8E00928151 /* Routechoices Watch Tracker Watch App.app */,
+				89D838262EC1FB8E00928151 /* Routechoices-watch-tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,14 +122,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		89D838372EC1FE4800928151 /* Routechoices Watch Tracker Watch App */ = {
+		8971CABC2EC4DA6400053172 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89D838472EC205D600928151 /* Routechoices-Watch-Tracker-Watch-App-Info.plist */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		899B2A122EC4E283007EB5A4 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		89D838372EC1FE4800928151 /* Routechoices-watch-tracker */ = {
+			isa = PBXGroup;
+			children = (
+				89D838472EC205D600928151 /* Info.plist */,
 				89D8383F2EC1FF3800928151 /* Assets.xcassets */,
 				89D838352EC1FE4800928151 /* ContentView.swift */,
 			);
-			path = "Routechoices Watch Tracker Watch App";
+			path = "Routechoices-watch-tracker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,15 +161,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				899B2A152EC4E735007EB5A4 /* PBXTargetDependency */,
 			);
 			name = "Routechoices-ios-tracker";
 			productName = "Routechoices-ios-tracker";
 			productReference = 692B0F4726665BE20088EC92 /* Routechoices-ios-tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		89D838252EC1FB8E00928151 /* Routechoices Watch Tracker Watch App */ = {
+		89D838252EC1FB8E00928151 /* Routechoices-watch-tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89D838342EC1FB9300928151 /* Build configuration list for PBXNativeTarget "Routechoices Watch Tracker Watch App" */;
+			buildConfigurationList = 89D838342EC1FB9300928151 /* Build configuration list for PBXNativeTarget "Routechoices-watch-tracker" */;
 			buildPhases = (
 				89D838222EC1FB8E00928151 /* Sources */,
 				89D838232EC1FB8E00928151 /* Frameworks */,
@@ -152,11 +180,11 @@
 			);
 			dependencies = (
 			);
-			name = "Routechoices Watch Tracker Watch App";
+			name = "Routechoices-watch-tracker";
 			packageProductDependencies = (
 			);
 			productName = "Routechoices Watch Tracker Watch App";
-			productReference = 89D838262EC1FB8E00928151 /* Routechoices Watch Tracker Watch App.app */;
+			productReference = 89D838262EC1FB8E00928151 /* Routechoices-watch-tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,6 +193,9 @@
 		692B0F3F26665BE20088EC92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
@@ -190,7 +221,7 @@
 			projectRoot = "";
 			targets = (
 				692B0F4626665BE20088EC92 /* Routechoices-ios-tracker */,
-				89D838252EC1FB8E00928151 /* Routechoices Watch Tracker Watch App */,
+				89D838252EC1FB8E00928151 /* Routechoices-watch-tracker */,
 			);
 		};
 /* End PBXProject section */
@@ -210,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D838402EC1FF3800928151 /* Assets.xcassets in Resources */,
-				89D8383A2EC1FEF500928151 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +270,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		899B2A152EC4E735007EB5A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89D838252EC1FB8E00928151 /* Routechoices-watch-tracker */;
+			targetProxy = 899B2A142EC4E735007EB5A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		692B0F5426665BE30088EC92 /* Debug */ = {
@@ -366,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.8.6;
+				CURRENT_PROJECT_VERSION = 2.0.3;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6T2MNWB5VC;
 				ENABLE_PREVIEWS = YES;
@@ -378,9 +416,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.6;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.routechoices.routechoices-ios-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.8.6;
+				CURRENT_PROJECT_VERSION = 2.0.3;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 6T2MNWB5VC;
 				ENABLE_PREVIEWS = YES;
@@ -404,9 +443,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8.6;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.routechoices.routechoices-ios-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -420,13 +460,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.0.3;
 				DEVELOPMENT_TEAM = 6T2MNWB5VC;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Routechoices-Watch-Tracker-Watch-App-Info.plist";
+				INFOPLIST_FILE = "Routechoices-watch-tracker/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Routechoices Watch Tracker";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.routechoices.routechoices-ios-tracker";
@@ -436,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.routechoices.routechoices-ios-tracker.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -461,13 +501,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.0.3;
 				DEVELOPMENT_TEAM = 6T2MNWB5VC;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Routechoices-Watch-Tracker-Watch-App-Info.plist";
+				INFOPLIST_FILE = "Routechoices-watch-tracker/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Routechoices Watch Tracker";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.routechoices.routechoices-ios-tracker";
@@ -477,7 +517,7 @@
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.routechoices.routechoices-ios-tracker.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -514,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89D838342EC1FB9300928151 /* Build configuration list for PBXNativeTarget "Routechoices Watch Tracker Watch App" */ = {
+		89D838342EC1FB9300928151 /* Build configuration list for PBXNativeTarget "Routechoices-watch-tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89D838322EC1FB9300928151 /* Debug */,
